@@ -85,15 +85,17 @@ Qext = Cext./(pi*radius^2);
 Qabs = Cabs./(pi*radius^2);
 
 % Plots
-% Dielectric function
+% Relative permittivity
 figure(1)
 hold on
+plot(read(:,1),read(:,2),'ok')
+plot(read(:,1),read(:,3),'or')
 plot(energy, e1_read,'k','linewidth',2);
 plot(energy, e2_read,'r','linewidth',2);
 xlabel ('energy (eV)', 'FontSize',10);
 title ('relative permittivity, \epsilon', 'FontSize',10);
-leg1=legend('epsilon1','epsilon2','Location','SouthEast');
-% 
+leg1=legend('epsilon1 - data','epsilon2 - data','epsilon1 - interpolated','epsilon2 - interpolated','Location','SouthEast');
+
 % Scattering
 figure (2)
 hold on
