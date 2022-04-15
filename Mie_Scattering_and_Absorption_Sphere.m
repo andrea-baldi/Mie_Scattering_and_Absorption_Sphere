@@ -74,12 +74,12 @@ for n=1:nmax
     extele = extele + (2*n+1).*real(an+bn);
 end
 
-% Calculate scattering, extinciton, and absorption cross sections
+% Calculates scattering, extinction, and absorption cross sections
 Csca = 2*pi./(k.^2).*scaele;
 Cext = 2*pi./(k.^2).*extele;
 Cabs = Cext-Csca;
 
-% Calculate scattering, extinciton, and absorption efficiencies
+% Calculates scattering, extinction, and absorption efficiencies
 Qsca = Csca./(pi*radius^2);
 Qext = Cext./(pi*radius^2);
 Qabs = Cabs./(pi*radius^2);
